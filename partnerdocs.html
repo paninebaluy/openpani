@@ -1,8 +1,72 @@
+<!DOCTYPE html>
 <html>
+<head>
 <title>
 Документы
 </title>
+<style>
+.button {
+    background-color: #ffd20a;
+    border: 1;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.buttonwh {
+    background-color: #ffffff;
+    border: 1;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+</head>
 <body>
 <b><h1>Документы</h1></b>
+<div id="headers">
+<h2>Юридические документы</h2>
+<p>Свидетельство СМИ от Роскомнадзора</p>
+</div>
+
+<div id='buttons'>
+<button id='yesbutton' class='button' type="button" onclick="YesB()">Есть</button>
+<button id='nobutton' class='buttonwh' type="button" onclick="NoB()">Нет</button>
+</div>
+
+<div id="varcont">
+<p>1. <a href = "http://partner.news.yandex.ru/media_agreement.pdf">Соглашение об информационном сотрудничестве (PDF)</a></p>
+<p>2. <a href = "http://partner.news.yandex.ru/media_letter.docx">Уведомление для юридических лиц (DOCX)</a></p>
+<p>3. <a href = "https://partner.news.yandex.ru/public/documents/media_letter-fl.docx">Уведомление для физических лиц (DOCX)</a></p>
+<p>Как заполнять!!!:</p>
+</div>
+
+<script type="text/javascript">
+
+function YesB() {
+	document.getElementById("varcont").innerHTML = '<p>1. <a href = "http://partner.news.yandex.ru/media_agreement.pdf">Соглашение об информационном сотрудничестве (PDF)</a></p><p>2. <a href = "http://partner.news.yandex.ru/media_letter.docx">Уведомление для юридических лиц (DOCX)</a></p><p>3. <a href = "https://partner.news.yandex.ru/media_letter-fl.docx">Уведомление для физических лиц (DOCX)</a></p><p>Как заполнять!!!:</p>';
+	document.getElementById("yesbutton").className="button";
+	document.getElementById("nobutton").className="buttonwh";
+	//$('yesbutton').toggleClass('button buttonwh');
+	//$('nobutton').toggleClass('button buttonwh');
+			}
+function NoB() {
+	document.getElementById("varcont").innerHTML = '<p>1. <a href = "https://partner.news.yandex.ru/agreement.pdf">Соглашение об информационном сотрудничестве (PDF)</a></p><p>2. <a href = "https://partner.news.yandex.ru/letter.docx">Уведомление для юридических лиц (DOCX)</a></p><p>3. <a href = "https://partner.news.yandex.ru/letter-fl.docx">Уведомление для физических лиц (DOCX)</a></p><p>Как заполнять?????:</p>';
+	document.getElementById("nobutton").className="button";
+	document.getElementById("yesbutton").className="buttonwh";	
+	//$('yesbutton').toggleClass('button buttonwh');
+	//$('nobutton').toggleClass('button buttonwh');
+			}
+</script>
+
 </body>
 </html>
